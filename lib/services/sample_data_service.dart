@@ -1,0 +1,170 @@
+import 'package:uuid/uuid.dart';
+import '../models/product_model.dart';
+import '../models/customer_model.dart';
+
+class SampleDataService {
+  static const _uuid = Uuid();
+
+  static List<ProductModel> getInitialProducts() {
+    final now = DateTime.now();
+    return [
+      ProductModel(
+        id: _uuid.v4(),
+        name: "O3+ Bridal Glow Facial Kit",
+        category: "Skin Care",
+        price: 2450.0,
+        costPrice: 1600.0,
+        stockQuantity: 24,
+        unit: "kit",
+        usageCount: 15,
+        createdAt: now.subtract(const Duration(days: 30)),
+      ),
+      ProductModel(
+        id: _uuid.v4(),
+        name: "L'Oreal Professional Absolut Hair Mask (500ml)",
+        category: "Hair Care",
+        price: 950.0,
+        costPrice: 650.0,
+        stockQuantity: 18,
+        unit: "jar",
+        usageCount: 22,
+        createdAt: now.subtract(const Duration(days: 28)),
+      ),
+      ProductModel(
+        id: _uuid.v4(),
+        name: "Streax Professional Argan Secrets Serum (100ml)",
+        category: "Hair Care",
+        price: 499.0,
+        costPrice: 320.0,
+        stockQuantity: 30,
+        unit: "bottle",
+        usageCount: 28,
+        createdAt: now.subtract(const Duration(days: 25)),
+      ),
+      ProductModel(
+        id: _uuid.v4(),
+        name: "Kryolan TV Paint Stick Shade FS-28",
+        category: "Makeup & Cosmetics",
+        price: 1350.0,
+        costPrice: 950.0,
+        stockQuantity: 12,
+        unit: "pcs",
+        usageCount: 14,
+        createdAt: now.subtract(const Duration(days: 20)),
+      ),
+      ProductModel(
+        id: _uuid.v4(),
+        name: "Mac Studio Fix Powder Plus Foundation",
+        category: "Makeup & Cosmetics",
+        price: 3200.0,
+        costPrice: 2400.0,
+        stockQuantity: 8,
+        unit: "pcs",
+        usageCount: 9,
+        createdAt: now.subtract(const Duration(days: 18)),
+      ),
+      ProductModel(
+        id: _uuid.v4(),
+        name: "Raga Professional De-Tan Cream (500g)",
+        category: "Skin Care",
+        price: 1150.0,
+        costPrice: 750.0,
+        stockQuantity: 15,
+        unit: "jar",
+        usageCount: 18,
+        createdAt: now.subtract(const Duration(days: 15)),
+      ),
+      ProductModel(
+        id: _uuid.v4(),
+        name: "Lotus Herbals WhiteGlow Skin Serum",
+        category: "Skin Care",
+        price: 425.0,
+        costPrice: 280.0,
+        stockQuantity: 20,
+        unit: "bottle",
+        usageCount: 11,
+        createdAt: now.subtract(const Duration(days: 12)),
+      ),
+      ProductModel(
+        id: _uuid.v4(),
+        name: "Huda Beauty Matte Liquid Lipstick",
+        category: "Makeup & Cosmetics",
+        price: 1950.0,
+        costPrice: 1350.0,
+        stockQuantity: 14,
+        unit: "pcs",
+        usageCount: 16,
+        createdAt: now.subtract(const Duration(days: 10)),
+      ),
+      ProductModel(
+        id: _uuid.v4(),
+        name: "Bridal HD Makeup & Hair Styling Package",
+        category: "Salon Services",
+        price: 12000.0,
+        costPrice: 3000.0,
+        stockQuantity: 99,
+        unit: "session",
+        usageCount: 8,
+        createdAt: now.subtract(const Duration(days: 40)),
+      ),
+      ProductModel(
+        id: _uuid.v4(),
+        name: "Advance Hydra Glow Facial Session",
+        category: "Salon Services",
+        price: 2500.0,
+        costPrice: 600.0,
+        stockQuantity: 99,
+        unit: "session",
+        usageCount: 19,
+        createdAt: now.subtract(const Duration(days: 35)),
+      ),
+      ProductModel(
+        id: _uuid.v4(),
+        name: "Keratin Deep Hair Smoothing Treatment",
+        category: "Salon Services",
+        price: 4500.0,
+        costPrice: 1200.0,
+        stockQuantity: 99,
+        unit: "session",
+        usageCount: 12,
+        createdAt: now.subtract(const Duration(days: 22)),
+      ),
+    ];
+  }
+
+  static List<CustomerModel> getInitialCustomers() {
+    final now = DateTime.now();
+    return [
+      CustomerModel(
+        id: _uuid.v4(),
+        name: "Pooja Sharma",
+        phone: "+91 98250 12345",
+        address: "Mota Bazaar, Anand",
+        totalSpent: 4900.0,
+        totalInvoices: 2,
+        lastVisit: now.subtract(const Duration(days: 2)),
+        notes: "Preferred brand: O3+ and Streax",
+      ),
+      CustomerModel(
+        id: _uuid.v4(),
+        name: "Riddhi Shah",
+        phone: "+91 97123 45678",
+        address: "Vidyanagar Road, Anand",
+        totalSpent: 14450.0,
+        totalInvoices: 3,
+        lastVisit: now.subtract(const Duration(days: 5)),
+        notes: "Bridal customer for upcoming wedding",
+      ),
+      CustomerModel(
+        id: _uuid.v4(),
+        name: "Anjali Dave",
+        phone: "+91 99090 98765",
+        address: "Borsad Chowkdi, Anand",
+        totalSpent: 2900.0,
+        totalInvoices: 1,
+        lastVisit: now.subtract(const Duration(days: 10)),
+        notes: "Hair spa regular",
+      ),
+    ];
+  }
+}
